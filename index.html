@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Issue Tracker</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="login-container">
+
+<div class="logo">
+<img src="./assets/github-logo.png" alt="" width="80">
+</div>
+
+<h2>GitHub Issues Tracker</h2>
+<p class="subtitle">Sign in to manage your issues</p>
+
+<form id="loginForm">
+
+<label>Username</label>
+<input type="text" id="username" placeholder="Enter Username">
+
+<p class="hint">Default: admin</p>
+
+<label>Password</label>
+
+<div class="password-box">
+<input type="password" id="password" placeholder="Enter Password">
+</div>
+
+<p class="hint">Default: admin123</p>
+
+<button type="submit" class="login-btn">Sign In</button>
+
+<p id="errorMessage"></p>
+
+</form>
+
+<div class="divider">OR</div>
+
+<div class="demo-box">
+<p>Demo Credentials:</p>
+<p><b>Username:</b> admin</p>
+<p><b>Password:</b> admin123</p>
+</div>
+
+</div>
+ <!-- JavaScript -->
+ <script src="./script.js"></script>
+</body>
+</html>
