@@ -38,3 +38,54 @@ function displayIssues(issueArray) {
     issueList.appendChild(card)
   })
 }
+
+//Build a singlar issue card element
+function createIssueCard(issue) {
+
+//Pick a random priority label
+  const priority = issue.priority
+
+//Choose status icon based on open / closed
+  const statusIcon = issue.status === "open"
+    ? "assets/Open-Status.png"
+    : "assets/Closed- Status .png"
+
+//Format the dates into a readable string
+  const createdDate = new Date(issue.createdAt).toLocaleDateString()
+  const updatedDate = new Date(issue.updatedAt).toLocaleDateString()
+
+//Create the card element
+  const card = document.createElement("div")
+  card.className = `issue-card ${issue.status}`
+
+  card.innerHTML = `
+    <div class="issue-top">
+      <div class="status-icon">
+        <img src="${statusIcon}" alt="${issue.status} status" />
+      </div>
+      <div class="priority ${priority.toLowerCase()}">${priority}</div>
+    </div>
+
+    <div class="issue-title">${issue.title}</div>
+
+    <div class="issue-desc">
+      ${issue.description || "The navigation menu doesn't collapse properly on mobile devices..."}
+    </div>
+
+    <div class="tags">
+      <span class="tag bug">🐞BUG</span>
+      <span class="tag help">HELP WANTED</span>
+    </div>
+
+    <div class="issue-footer">
+      <span>#${issue.id} by ${issue.author || "john_doe"}</span>
+    </div>
+
+    <div class="issue-footer">
+      <span>Created: ${createdDate}</span>
+      <span>Updated: ${updatedDate}</span>
+    </div>
+  `
+
+  return card
+}

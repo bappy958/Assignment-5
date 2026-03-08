@@ -208,3 +208,20 @@ body {
   color: #4c4747;
 }
 
+/*----Tags----*/
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.bug         { background: #fee2e2; color: #dc2626; }
+.help        { background: #fef3c7; color: #d97706; }
+.enhancement { background: #d1fae5; color: #059669; }
+
