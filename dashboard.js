@@ -89,3 +89,22 @@ function createIssueCard(issue) {
 
   return card
 }
+
+//Tab Filter(All/ Open/ Closed)
+  tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+
+//Move the active highlight to the clicked tab
+    document.querySelector(".tab.active").classList.remove("active")
+    tab.classList.add("active")
+
+    const selectedTab = tab.dataset.tab
+
+    if (selectedTab === "all") {
+      displayIssues(allIssues)
+    } else {
+      const filtered = allIssues.filter(issue => issue.status === selectedTab)
+      displayIssues(filtered)
+    }
+  })
+})

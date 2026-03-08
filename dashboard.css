@@ -225,3 +225,11 @@ body {
 .help        { background: #fef3c7; color: #d97706; }
 .enhancement { background: #d1fae5; color: #059669; }
 
+/*----Footer----*/
+.issue-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 10px;
+}
