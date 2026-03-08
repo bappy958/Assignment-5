@@ -57,3 +57,154 @@ body {
   background: #4A00FF;
 }
 
+/*----Filter Tabs----*/
+.tabs {
+  display: flex;
+  gap: 10px;
+  padding: 16px 30px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.tab:hover {
+  background: #ddd;
+}
+
+.tab.active {
+  background: #4A00FF;
+  color: white;
+}
+
+/*----Issues Header----*/
+.issues-header {
+  background: white;
+  margin: 0 30px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.issues-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.issue-icon-box {
+  width: 36px;
+  height: 36px;
+  background: #ede9fe;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.issue-icon-box img {
+  width: 18px;
+}
+
+.issues-left h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.issues-left p {
+  margin: 0;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/*----Legend(Open /Closed dots)----*/
+.issues-right {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.open-dot   { background: #22c55e; }
+.closed-dot { background: #A855F7; }
+
+/*----Issue Cards Grid----*/
+.issue-list {
+  padding: 20px 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/*----Single Issue Card----*/
+.issue-card {
+  background: #e7f4ed;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.issue-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/*----Top border colour by status----*/
+.issue-card.open   { border-top: 4px solid #10b981; }
+.issue-card.closed { border-top: 4px solid #A855F7; }
+
+/*----Top Row (icon + priority)----*/
+.issue-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.status-icon img {
+  width: 18px;
+}
+
+/*----Priority Badge----*/
+.priority {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.priority.high   { background: #fee2e2; color: #ec3030; }
+.priority.medium { background: #fef3c7; color: #e19004; }
+.priority.low    { background: #e5e7eb; color: #586784; }
+
+/*----Title & Description----*/
+.issue-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.issue-desc {
+  font-size: 13px;
+  color: #4c4747;
+}
+

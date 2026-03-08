@@ -28,7 +28,40 @@
     </div>
   </nav>
 
+  <!----Filter Tabs---->
+  <div class="tabs">
+    <button class="tab active" data-tab="all">All</button>
+    <button class="tab" data-tab="open">Open</button>
+    <button class="tab" data-tab="closed">Closed</button>
+  </div>
+
+<!----Issues Header---->
+  <div class="issues-header">
+    <div class="issues-left">
+      <div class="issue-icon-box">
+        <img src="assets/Aperture.png" alt="Issues Icon" />
+      </div>
+      <div>
+        <h3><span id="issueCount">0</span> Issues</h3>
+        <p>Track and manage your project issues</p>
+      </div>
+    </div>
+
+    <div class="issues-right">
+      <span class="legend">
+        <span class="dot open-dot"></span> Open
+      </span>
+      <span class="legend">
+        <span class="dot closed-dot"></span> Closed
+      </span>
+    </div>
+  </div>
+
+<!----Issue Cards Grid---->
+  <div id="issueList" class="issue-list"></div>
+
   <script src="dashboard.js"></script>
+
 
 </body>
 </html>
